@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher / store name follows the suite scheme "Ekte <Name>". -->
+    <string name="app_name">Ekte Steps</string>
+    <!-- In-app header: the short app name as the title, with the suite credit beneath it. -->
+    <string name="display_title">Steps</string>
+    <string name="author_credit">an Ekte App by EkteBrysjan</string>
+
+    <!-- Navigation -->
+    <string name="nav_today">Today</string>
+    <string name="nav_stats">Statistics</string>
+
+    <!-- Home -->
+    <string name="steps_today">Steps today</string>
+    <string name="last_days">Previous 6 days</string>
+    <string name="no_data_yet">No steps recorded yet. Take a walk!</string>
+
+    <!-- Statistics -->
+    <string name="statistics">Statistics</string>
+    <string name="total_steps">Total steps</string>
+    <string name="daily_average">Daily average</string>
+    <string name="best_day">Best day</string>
+    <string name="days_tracked">Days tracked</string>
+    <string name="history">History</string>
+    <string name="clear_history">Clear history</string>
+    <string name="clear_history_title">Clear all history?</string>
+    <string name="clear_history_message">This permanently deletes all recorded step data from this device. This cannot be undone.</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="steps_suffix">steps</string>
+
+    <!-- Permissions -->
+    <string name="permission_needed_title">Permission needed</string>
+    <string name="permission_needed_message">To count your steps, this app needs the Activity Recognition permission. Please grant it in system settings.</string>
+    <string name="open_settings">Open settings</string>
+    <string name="no_sensor">This device has no step-counter sensor, so steps can\'t be measured.</string>
+</resources>

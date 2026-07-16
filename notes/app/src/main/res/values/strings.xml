@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher / store name follows the suite scheme "Ekte <Name>". -->
+    <string name="app_name">Ekte Notes</string>
+    <!-- In-app header: the short app name as the title, with the suite credit beneath it. -->
+    <string name="display_title">Notes</string>
+    <string name="author_credit">an Ekte App by EkteBrysjan</string>
+
+    <!-- Navigation -->
+    <string name="nav_notes">Notes</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Notes list -->
+    <string name="search_hint">Search notes</string>
+    <string name="all_tags">All</string>
+    <string name="private_notes">Private</string>
+    <string name="no_notes_yet">No notes yet. Tap + to write one.</string>
+    <string name="no_matches">No notes match your search.</string>
+    <string name="add_note">New note</string>
+    <string name="untitled">Untitled</string>
+    <string name="locked_hint">Private notes are hidden. Unlock to show them.</string>
+
+    <!-- Editor -->
+    <string name="title_hint">Title</string>
+    <string name="body_hint">Write your note…</string>
+    <string name="tags_hint">Tags (comma separated)</string>
+    <string name="private_toggle">Private note</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="back">Back</string>
+    <string name="delete_note_title">Delete this note?</string>
+    <string name="delete_note_message">This permanently removes the note from this device. This cannot be undone.</string>
+    <string name="edit_note">Edit note</string>
+    <string name="new_note">New note</string>
+    <string name="private_needs_pin">Set a PIN in Settings to mark notes as private.</string>
+
+    <!-- Settings: security -->
+    <string name="settings_security">Security</string>
+    <string name="pin_set">PIN lock is on</string>
+    <string name="pin_not_set">No PIN set</string>
+    <string name="set_pin">Set PIN</string>
+    <string name="change_pin">Change PIN</string>
+    <string name="remove_pin">Remove PIN</string>
+    <string name="lock_now">Lock private notes now</string>
+    <string name="unlocked_status">Private notes are unlocked</string>
+    <string name="locked_status">Private notes are locked</string>
+
+    <!-- PIN dialogs -->
+    <string name="enter_pin">Enter PIN</string>
+    <string name="confirm_pin">Confirm PIN</string>
+    <string name="unlock">Unlock</string>
+    <string name="pin_mismatch">PINs don\'t match. Try again.</string>
+    <string name="pin_wrong">Wrong PIN.</string>
+    <string name="pin_too_short">Use at least 4 digits.</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+
+    <!-- Settings: backup / export -->
+    <string name="settings_backup">Backup</string>
+    <string name="export_notes">Export all notes…</string>
+    <string name="import_notes">Import notes…</string>
+    <string name="export_caveat">Exported files are plain, unencrypted archives (they include private notes). Store them somewhere safe.</string>
+    <string name="export_ok">Exported all notes.</string>
+    <string name="export_failed">Export failed.</string>
+    <string name="import_ok">Imported %1$d note(s).</string>
+    <string name="import_failed">Import failed — not a valid Ekte Notes archive.</string>
+    <string name="export_needs_unlock">Unlock private notes before exporting.</string>
+    <string name="export_filename">ekte-notes-export.zip</string>
+
+    <!-- Settings: privacy -->
+    <string name="settings_privacy">Privacy</string>
+    <string name="privacy_body">Ekte Notes is built to respect you completely:\n\n• No ads, no tracking, no analytics, no accounts.\n• No network access at all — the app has no Internet permission, so it physically cannot send your notes anywhere. It works fully offline.\n• Every note is stored only in a local database on this device.\n• Automatic system backup is turned off, so nothing leaves the device on its own. Use Export to make your own backup file.\n• Private notes are hidden behind your PIN, which is stored only as a scrambled (hashed) value on this device — never in plain text. The PIN controls access inside the app; it does not encrypt the database itself, so treat your device\'s own screen lock as your first line of defence.</string>
+
+    <!-- Settings: about -->
+    <string name="settings_about">About</string>
+    <string name="about_version">Version %1$s</string>
+</resources>

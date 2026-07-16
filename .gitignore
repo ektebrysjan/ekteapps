@@ -1,0 +1,28 @@
+# Suite-wide ignores — applies across every app subdirectory.
+# Each app also has its own .gitignore so it stays self-contained if opened alone.
+
+# Build output & caches (any app)
+**/build/
+**/.gradle/
+**/.kotlin/
+**/.cxx/
+**/captures/
+
+# Machine-specific SDK path
+**/local.properties
+
+# IDE
+.idea/
+**/*.iml
+*.iml
+
+# OS
+.DS_Store
+
+# Local Claude Code config (not part of the app suite)
+.claude/
+
+# Signing / secrets (never commit these)
+**/*.jks
+**/*.keystore
+**/keystore.properties

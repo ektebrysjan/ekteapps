@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Local device-to-device / cloud backup of the Room database only.
+     No data is ever transmitted by the app itself. -->
+<full-backup-content>
+    <include domain="database" path="steps.db" />
+    <include domain="sharedpref" path="steps_prefs.xml" />
+</full-backup-content>
