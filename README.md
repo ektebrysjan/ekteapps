@@ -14,6 +14,7 @@ Each app lives in its own subdirectory as a complete, standalone Gradle project.
 | [`steps/`](steps/) | **Ekte Steps** | `com.ektebrysjan.steps` | Pedometer — today's steps, the previous 6 days, and simple stats over your local history. Counts in the background, no notification. |
 | [`notes/`](notes/) | **Ekte Notes** | `com.ektebrysjan.notes` | Notes — write, tag, search, optional PIN-locked private notes, and manual export/import. Zero permissions, fully offline. |
 | [`todo/`](todo/) | **Ekte Todo** | `com.ektebrysjan.todo` | To-do — multiple lists, tasks with optional due date and note, mark done, archive/delete, and CSV export/import. Zero permissions, fully offline. |
+| [`workout/`](workout/) | **Ekte Workout** | `com.ektebrysjan.workout` | Workout log — log type, duration, intensity and notes; weekly/monthly summaries; filter by type; CSV export/import. Zero permissions, fully offline. |
 
 ## The charter
 

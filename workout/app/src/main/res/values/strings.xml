@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher / store name follows the suite scheme "Ekte <Name>". -->
+    <string name="app_name">Ekte Workout</string>
+    <!-- In-app header: the short app name as the title, with the suite credit beneath it. -->
+    <string name="display_title">Workout</string>
+    <string name="author_credit">an Ekte App by EkteBrysjan</string>
+
+    <!-- Navigation -->
+    <string name="nav_log">Log</string>
+    <string name="nav_summary">Summary</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Log list -->
+    <string name="all_types">All</string>
+    <string name="no_workouts">No workouts logged yet. Tap + to add one.</string>
+    <string name="no_matches">No workouts of this type yet.</string>
+    <string name="add_workout">Log workout</string>
+    <string name="duration_minutes">%1$d min</string>
+
+    <!-- Editor -->
+    <string name="new_workout">Log workout</string>
+    <string name="edit_workout">Edit workout</string>
+    <string name="type_label">Type</string>
+    <string name="type_hint">Workout type</string>
+    <string name="duration_label">Duration (minutes)</string>
+    <string name="intensity_label">Intensity</string>
+    <string name="date_label">Date</string>
+    <string name="note_hint">Notes (optional)</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="delete">Delete</string>
+    <string name="delete_workout_title">Delete this workout?</string>
+    <string name="delete_workout_message">This permanently deletes the entry. This cannot be undone.</string>
+
+    <!-- Intensity labels (also used verbatim in the CSV) -->
+    <string name="intensity_low" translatable="false">Low</string>
+    <string name="intensity_medium" translatable="false">Medium</string>
+    <string name="intensity_high" translatable="false">High</string>
+
+    <!-- Summary -->
+    <string name="this_week">This week</string>
+    <string name="this_month">This month</string>
+    <string name="total_sessions">Sessions</string>
+    <string name="total_time">Total time</string>
+    <string name="by_type_month">This month by type</string>
+    <string name="hours_minutes">%1$dh %2$dm</string>
+    <string name="minutes_only">%1$dm</string>
+    <string name="summary_empty">Log a workout to see your weekly and monthly totals.</string>
+
+    <!-- Settings: backup -->
+    <string name="settings_backup">Backup</string>
+    <string name="export_log">Export log (CSV)…</string>
+    <string name="import_log">Import log (CSV)…</string>
+    <string name="export_caveat">Exports your full workout log to a plain CSV file you can open in any spreadsheet. Import reads a CSV in the same format back.</string>
+    <string name="export_ok">Exported workout log.</string>
+    <string name="export_failed">Export failed.</string>
+    <string name="import_ok">Imported %1$d workout(s).</string>
+    <string name="import_failed">Import failed — not a valid Ekte Workout CSV.</string>
+    <string name="export_filename">ekte-workout-export.csv</string>
+
+    <!-- Settings: about -->
+    <string name="settings_about">About</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="github_url" translatable="false">https://github.com/ektebrysjan</string>
+    <string name="github_label" translatable="false">github.com/ektebrysjan</string>
+</resources>

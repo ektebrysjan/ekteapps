@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. The real colours come from Compose (a single dark Material 3
+         scheme). This only styles the window before Compose is drawn — kept dark so there is no
+         light flash on launch, per the Ekte Apps dark-by-default charter. -->
+    <style name="Theme.Workout" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/app_background</item>
+        <item name="android:windowBackground">@color/app_background</item>
+    </style>
+</resources>
