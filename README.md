@@ -1,9 +1,7 @@
 # Ekte Apps
 
-Free, honest Android apps — no ads, no tracking, no accounts, no nonsense. Just small tools that do
-their job and leave you alone, all under the **“Ekte &lt;Name&gt;”** name.
-
-> Vibe coded with Claude Code because I'm lazy.
+Free, honest Android apps. No ads, no tracking, no accounts, no nonsense. Just Ekte Apps!
+Vibe coded with Claude Code because I'm lazy.
 
 Each app lives in its own subdirectory as a complete, standalone Gradle project.
 
@@ -30,11 +28,6 @@ Every app in the suite sticks to these rules:
 7. **No dark patterns** — no gamification, no engagement or retention tricks.
 8. **No gratuitous notifications** — only when they're genuinely core to the app (e.g. a calendar's
    reminders). Silent background work otherwise.
-9. **Consistent header** — the top bar shows the short app name, with *“an Ekte App by EkteBrysjan”*
-   beneath it.
-10. **Settings screen** — every app has one with a **Backup** section (manual export/import to a
-    local file) and an **About** section (app name, the credit line, version, and a link to
-    github.com/ektebrysjan). No separate in-app "Privacy" section.
 
 Roadmap: utility and lifestyle apps first (steps, notes, todo, habits, trackers), technical tools
-later (WiFi scanner, decibel meter, and friends).
+later (WiFi scanner, decibel meter, DNS troubleshooting, QR scanner).
