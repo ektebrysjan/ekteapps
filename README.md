@@ -1,6 +1,6 @@
 # Ekte Apps
 
-Free, honest Android apps. No ads, no tracking, no accounts, no nonsense. Just Ekte Apps!
+Free, honest Android apps. No ads, no tracking, no accounts, no nonsense. Just Ekte Apps!  
 Vibe coded with Claude Code because I'm lazy.
 
 Each app lives in its own subdirectory as a complete, standalone Gradle project.
