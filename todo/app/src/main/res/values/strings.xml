@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher / store name follows the suite scheme "Ekte <Name>". -->
+    <string name="app_name">Ekte Todo</string>
+    <!-- In-app header: the short app name as the title, with the suite credit beneath it. -->
+    <string name="display_title">Todo</string>
+    <string name="author_credit">an Ekte App by EkteBrysjan</string>
+
+    <!-- Navigation -->
+    <string name="nav_todo">Todo</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Lists -->
+    <string name="default_list_name">Tasks</string>
+    <string name="add_list">New list</string>
+    <string name="rename_list">Rename list</string>
+    <string name="delete_list">Delete list</string>
+    <string name="list_name_hint">List name</string>
+    <string name="delete_list_title">Delete this list?</string>
+    <string name="delete_list_message">This permanently deletes the list and all of its tasks. This cannot be undone.</string>
+    <string name="no_lists">No lists yet. Create one to get started.</string>
+
+    <!-- Tasks -->
+    <string name="add_task">New task</string>
+    <string name="no_tasks">Nothing here yet. Tap + to add a task.</string>
+    <string name="show_completed">Show completed</string>
+    <string name="show_archived">Show archived</string>
+    <string name="completed_header">Completed</string>
+    <string name="archived_header">Archived</string>
+    <string name="archive">Archive</string>
+    <string name="unarchive">Unarchive</string>
+    <string name="delete">Delete</string>
+    <string name="restore">Restore</string>
+
+    <!-- Editor -->
+    <string name="new_task">New task</string>
+    <string name="edit_task">Edit task</string>
+    <string name="title_hint">Title</string>
+    <string name="note_hint">Note (optional)</string>
+    <string name="due_date">Due date</string>
+    <string name="set_due_date">Set due date</string>
+    <string name="clear_due_date">Clear</string>
+    <string name="no_due_date">No due date</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="delete_task_title">Delete this task?</string>
+    <string name="delete_task_message">This permanently deletes the task. This cannot be undone.</string>
+
+    <!-- Settings: backup -->
+    <string name="settings_backup">Backup</string>
+    <string name="export_tasks">Export tasks (CSV)…</string>
+    <string name="import_tasks">Import tasks (CSV)…</string>
+    <string name="export_caveat">Exports every task (including completed and archived) to a plain CSV file you can open in any spreadsheet. Import reads a CSV in the same format back.</string>
+    <string name="export_ok">Exported all tasks.</string>
+    <string name="export_failed">Export failed.</string>
+    <string name="import_ok">Imported %1$d task(s).</string>
+    <string name="import_failed">Import failed — not a valid Ekte Todo CSV.</string>
+    <string name="export_filename">ekte-todo-export.csv</string>
+
+    <!-- Settings: about -->
+    <string name="settings_about">About</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="github_url" translatable="false">https://github.com/ektebrysjan</string>
+    <string name="github_label" translatable="false">github.com/ektebrysjan</string>
+</resources>
