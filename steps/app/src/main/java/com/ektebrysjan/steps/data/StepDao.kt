@@ -14,6 +14,10 @@ abstract class StepDao {
     @Query("SELECT * FROM daily_steps ORDER BY date DESC")
     abstract fun observeAll(): Flow<List<DailyStep>>
 
+    /** One-shot snapshot of all days, for export. */
+    @Query("SELECT * FROM daily_steps ORDER BY date DESC")
+    abstract suspend fun getAllOnce(): List<DailyStep>
+
     /** Rows for the given dates (used by the home screen for the last 7 days). */
     @Query("SELECT * FROM daily_steps WHERE date IN (:dates)")
     abstract fun observeForDates(dates: List<String>): Flow<List<DailyStep>>

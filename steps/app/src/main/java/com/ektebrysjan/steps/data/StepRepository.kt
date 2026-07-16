@@ -63,6 +63,14 @@ class StepRepository private constructor(
         prefs.edit().remove(KEY_LAST_VALUE).apply()
     }
 
+    /** One-shot snapshot of the full history, for export. */
+    suspend fun getAllOnce(): List<DailyStep> = dao.getAllOnce()
+
+    /** Restore days from a backup; imported values overwrite existing rows for the same date. */
+    suspend fun importDays(days: List<DailyStep>) = mutex.withLock {
+        days.forEach { dao.upsert(it) }
+    }
+
     companion object {
         private const val PREFS = "steps_prefs"
         private const val KEY_LAST_VALUE = "last_counter_value"

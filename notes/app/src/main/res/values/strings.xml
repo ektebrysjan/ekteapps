@@ -67,11 +67,9 @@
     <string name="export_needs_unlock">Unlock private notes before exporting.</string>
     <string name="export_filename">ekte-notes-export.zip</string>
 
-    <!-- Settings: privacy -->
-    <string name="settings_privacy">Privacy</string>
-    <string name="privacy_body">Ekte Notes is built to respect you completely:\n\n• No ads, no tracking, no analytics, no accounts.\n• No network access at all — the app has no Internet permission, so it physically cannot send your notes anywhere. It works fully offline.\n• Every note is stored only in a local database on this device.\n• Automatic system backup is turned off, so nothing leaves the device on its own. Use Export to make your own backup file.\n• Private notes are hidden behind your PIN, which is stored only as a scrambled (hashed) value on this device — never in plain text. The PIN controls access inside the app; it does not encrypt the database itself, so treat your device\'s own screen lock as your first line of defence.</string>
-
     <!-- Settings: about -->
     <string name="settings_about">About</string>
     <string name="about_version">Version %1$s</string>
+    <string name="github_url" translatable="false">https://github.com/ektebrysjan</string>
+    <string name="github_label" translatable="false">github.com/ektebrysjan</string>
 </resources>

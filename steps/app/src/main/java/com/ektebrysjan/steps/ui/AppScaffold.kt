@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.DirectionsWalk
 import androidx.compose.material.icons.filled.BarChart
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -12,12 +13,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -34,9 +39,16 @@ private data class Tab(
 fun AppScaffold(viewModel: StepsViewModel) {
     val tabs = listOf(
         Tab(R.string.nav_today, Icons.AutoMirrored.Filled.DirectionsWalk),
-        Tab(R.string.nav_stats, Icons.Default.BarChart)
+        Tab(R.string.nav_stats, Icons.Default.BarChart),
+        Tab(R.string.nav_settings, Icons.Default.Settings)
     )
     var selected by rememberSaveable { mutableIntStateOf(0) }
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    // Surface export/import results as snackbars.
+    LaunchedEffect(Unit) {
+        viewModel.messages.collect { snackbarHostState.showSnackbar(it) }
+    }
 
     Scaffold(
         topBar = {
@@ -56,6 +68,7 @@ fun AppScaffold(viewModel: StepsViewModel) {
                 }
             )
         },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         bottomBar = {
             NavigationBar {
                 tabs.forEachIndexed { index, tab ->
@@ -71,7 +84,8 @@ fun AppScaffold(viewModel: StepsViewModel) {
     ) { innerPadding ->
         when (selected) {
             0 -> HomeScreen(viewModel = viewModel, modifier = Modifier.padding(innerPadding))
-            else -> StatsScreen(viewModel = viewModel, modifier = Modifier.padding(innerPadding))
+            1 -> StatsScreen(viewModel = viewModel, modifier = Modifier.padding(innerPadding))
+            else -> SettingsScreen(viewModel = viewModel, modifier = Modifier.padding(innerPadding))
         }
     }
 }

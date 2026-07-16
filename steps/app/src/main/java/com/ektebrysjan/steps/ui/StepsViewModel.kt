@@ -1,11 +1,16 @@
 package com.ektebrysjan.steps.ui
 
 import android.app.Application
+import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.ektebrysjan.steps.R
 import com.ektebrysjan.steps.data.DailyStep
 import com.ektebrysjan.steps.data.StepRepository
 import com.ektebrysjan.steps.util.DateUtils
+import com.ektebrysjan.steps.util.StepsExport
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
@@ -79,5 +84,32 @@ class StepsViewModel(app: Application) : AndroidViewModel(app) {
 
     fun clearHistory() {
         viewModelScope.launch { repository.clearHistory() }
+    }
+
+    /** One-off user messages (export/import results), resolved to display strings. */
+    private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 4)
+    val messages: SharedFlow<String> = _messages
+
+    fun export(uri: Uri) {
+        viewModelScope.launch {
+            val ok = StepsExport.export(getApplication(), uri, repository.getAllOnce())
+            emit(if (ok) R.string.export_ok else R.string.export_failed)
+        }
+    }
+
+    fun import(uri: Uri) {
+        viewModelScope.launch {
+            val days = StepsExport.import(getApplication(), uri)
+            if (days == null) {
+                emit(R.string.import_failed)
+            } else {
+                repository.importDays(days)
+                _messages.tryEmit(getApplication<Application>().getString(R.string.import_ok, days.size))
+            }
+        }
+    }
+
+    private fun emit(resId: Int) {
+        _messages.tryEmit(getApplication<Application>().getString(resId))
     }
 }

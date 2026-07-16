@@ -2,6 +2,7 @@ package com.ektebrysjan.notes.ui
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,6 +29,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -124,14 +126,6 @@ fun SettingsScreen(viewModel: NotesViewModel) {
                 }
             }
 
-            // --- Privacy ---
-            SettingsSection(title = stringResource(R.string.settings_privacy)) {
-                Text(
-                    text = stringResource(R.string.privacy_body),
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-
             // --- About ---
             SettingsSection(title = stringResource(R.string.settings_about)) {
                 Text(
@@ -149,6 +143,16 @@ fun SettingsScreen(viewModel: NotesViewModel) {
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 4.dp)
+                )
+                val uriHandler = LocalUriHandler.current
+                val githubUrl = stringResource(R.string.github_url)
+                Text(
+                    text = stringResource(R.string.github_label),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier
+                        .padding(top = 4.dp)
+                        .clickable { uriHandler.openUri(githubUrl) }
                 )
             }
         }
